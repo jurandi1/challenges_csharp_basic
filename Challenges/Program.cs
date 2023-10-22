@@ -10,6 +10,36 @@ namespace Challenges
             //----------------------------------------------------------------------
             // DESAFIOS DE LÓGICA COM O C#
             Console.WriteLine("-----------------------------------------------------");
+            Console.WriteLine("Desafio 2 - Entrada de dados");
+
+            Console.WriteLine("Entre com o seu nome completo: ");
+            string nomeCompleto = Console.ReadLine();
+
+            Console.WriteLine("Quantos quartos tem na sua casa? ");
+            int quartos = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Entre com o preço de um produto: ");
+            double preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            Console.WriteLine("Entre com o seu último nome, idade e altura (mesma linha): ");
+            string[] vet2 = Console.ReadLine().Split(' ');
+            string nome2 = vet2[0];
+            int idade2 = int.Parse(vet2[1]);
+            double altura2 = double.Parse(vet2[2], CultureInfo.InvariantCulture);
+
+            Console.WriteLine("Informações recebidas:");
+            Console.WriteLine(nomeCompleto);
+            Console.WriteLine(quartos);
+            Console.WriteLine(preco.ToString("F2", CultureInfo.InvariantCulture));
+            Console.WriteLine(nome2);
+            Console.WriteLine(idade2);
+            Console.WriteLine(altura2.ToString("F2", CultureInfo.InvariantCulture));
+
+            
+
+            //----------------------------------------------------------------------
+            // DESAFIOS DE LÓGICA COM O C#
+            Console.WriteLine("-----------------------------------------------------");
             Console.WriteLine("Desafio 1 - Conversão implícita e casting");
             string Produto1 = "Computador";
             string Produto2 = "Mesa de Escritório";
