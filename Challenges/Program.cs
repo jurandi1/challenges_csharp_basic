@@ -10,6 +10,89 @@ namespace Challenges
             //----------------------------------------------------------------------
             // DESAFIOS DE LÓGICA COM O C#
             Console.WriteLine("-----------------------------------------------------");
+            Console.WriteLine("Desafio 5 -  Estrutura Repetitiva WHILE ");
+            Console.WriteLine("");
+            Console.WriteLine("E1 -  Escreva um programa que repita a leitura de uma senha até que ela seja válida. Para cada leitura de senha \r\nincorreta informada, escrever a mensagem \"Senha Invalida\". Quando a senha for informada corretamente deve ser \r\nimpressa a mensagem \"Acesso Permitido\" e o algoritmo encerrado. Considere que a senha correta é o valor 2002. ");
+
+            int senha = int.Parse(Console.ReadLine());
+
+            while (senha != 2002)
+            {
+                Console.WriteLine("Senha Invalida");
+                senha = int.Parse(Console.ReadLine());
+            }
+
+            Console.WriteLine("Acesso Permitido");
+
+            Console.WriteLine("");
+            Console.WriteLine("-----------------------------------------------------");
+            Console.WriteLine("");
+            Console.WriteLine("E2 -  Escreva um programa para ler as coordenadas (X,Y) de uma quantidade indeterminada de pontos no sistema \r\ncartesiano. Para cada ponto escrever o quadrante a que ele pertence. O algoritmo será encerrado quando pelo \r\nmenos uma de duas coordenadas for NULA (nesta situação sem escrever mensagem alguma). ");
+
+            string[] valores2 = Console.ReadLine().Split(' ');
+            int x2 = int.Parse(valores2[0]);
+            int y2 = int.Parse(valores2[1]);
+
+            while (x2 != 0 && y2 != 0)
+            {
+                if (x2 > 0 && y2 > 0)
+                {
+                    Console.WriteLine("primeiro");
+                }
+                else if (x2 < 0 && y2 > 0)
+                {
+                    Console.WriteLine("segundo");
+                }
+                else if (x2 < 0 && y2 < 0)
+                {
+                    Console.WriteLine("terceiro");
+                }
+                else
+                {
+                    Console.WriteLine("quarto");
+                }
+                valores2 = Console.ReadLine().Split(' ');
+                x2 = int.Parse(valores2[0]);
+                y2 = int.Parse(valores2[1]);
+            }
+
+            Console.WriteLine("");
+            Console.WriteLine("-----------------------------------------------------");
+            Console.WriteLine("");
+            Console.WriteLine("E3 -  Um Posto de combustíveis deseja determinar qual de seus produtos tem a preferência de seus clientes. Escreva \r\num algoritmo para ler o tipo de combustível abastecido (codificado da seguinte forma: 1.Álcool 2.Gasolina 3.Diesel \r\n4.Fim). Caso o usuário informe um código inválido (fora da faixa de 1 a 4) deve ser solicitado um novo código (até \r\nque seja válido). O programa será encerrado quando o código informado for o número 4. Deve ser escrito a \r\nmensagem: \"MUITO OBRIGADO\" e a quantidade de clientes que abasteceram cada tipo de combustível, conforme \r\nexemplo. ");
+
+            int alcool = 0;
+            int gasolina = 0;
+            int diesel = 0;
+
+            int tipo = int.Parse(Console.ReadLine());
+
+            while (tipo != 4)
+            {
+                if (tipo == 1)
+                {
+                    alcool = alcool + 1;
+                }
+                else if (tipo == 2)
+                {
+                    gasolina = gasolina + 1;
+                }
+                else if (tipo == 3)
+                {
+                    diesel = diesel + 1;
+                }
+
+                tipo = int.Parse(Console.ReadLine());
+            }
+
+            Console.WriteLine("MUITO OBRIGADO");
+            Console.WriteLine("Alcool: " + alcool);
+            Console.WriteLine("Gasolina: " + gasolina);
+            Console.WriteLine("Diesel: " + diesel);
+
+            //----------------------------------------------------------------------
+            // DESAFIOS DE LÓGICA COM O C#
+            Console.WriteLine("-----------------------------------------------------");
             Console.WriteLine("Desafio 4 - Estrutura Condicional (if-else) ");
             Console.WriteLine("");
             Console.WriteLine("E1 - Fazer um programa para ler um número inteiro, e depois dizer se este número é negativo ou não. ");
