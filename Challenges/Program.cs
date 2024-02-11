@@ -10,6 +10,140 @@ namespace Challenges
             //----------------------------------------------------------------------
             // DESAFIOS DE LÓGICA COM O C#
             Console.WriteLine("-----------------------------------------------------");
+            Console.WriteLine("Desafio 6 -  Estrutura Repetitiva FOR ");
+            Console.WriteLine("");
+            Console.WriteLine("E1 -   Leia um valor inteiro X (1 <= X <= 1000). Em seguida mostre os ímpares de 1 até X, um valor por linha, inclusive o X, se for o caso. ");
+
+            int x3 = int.Parse(Console.ReadLine());
+
+            for (int i = 1; i <= x3; i++)
+            {
+                if (i % 2 != 0)
+                {
+                    Console.WriteLine(i);
+                }
+            }
+
+            Console.WriteLine("");
+            Console.WriteLine("-----------------------------------------------------");
+            Console.WriteLine("");
+            Console.WriteLine("E2 -  Leia um valor inteiro N. Este valor será a quantidade de valores inteiros X que serão lidos em seguida. \r\nMostre quantos destes valores X estão dentro do intervalo [10,20] e quantos estão fora do intervalo, mostrando \r\nessas informações conforme exemplo (use a palavra \"in\" para dentro do intervalo, e \"out\" para fora do intervalo).  ");
+
+            int n = int.Parse(Console.ReadLine());
+
+            int cont_in = 0;
+            int cont_out = 0;
+
+            for (int i = 0; i < n; i++)
+            {
+                int x4 = int.Parse(Console.ReadLine());
+                if (x4 >= 10 && x4 <= 20)
+                {
+                    cont_in = cont_in + 1;
+                }
+                else
+                {
+                    cont_out = cont_out + 1;
+                }
+            }
+
+            Console.WriteLine(cont_in + " in");
+            Console.WriteLine(cont_out + " out");
+
+            Console.WriteLine("");
+            Console.WriteLine("-----------------------------------------------------");
+            Console.WriteLine("");
+            Console.WriteLine("E3 - Leia 1 valor inteiro N, que representa o número de casos de teste que vem a seguir. Cada caso de teste consiste \r\nde 3 valores reais, cada um deles com uma casa decimal. Apresente a média ponderada para cada um destes \r\nconjuntos de 3 valores, sendo que o primeiro valor tem peso 2, o segundo valor tem peso 3 e o terceiro valor tem \r\npeso 5. ");
+
+            int n3 = int.Parse(Console.ReadLine());
+
+            for (int i = 0; i < n3; i++)
+            {
+
+                string[] line = Console.ReadLine().Split(' ');
+                double a = double.Parse(line[0], CultureInfo.InvariantCulture);
+                double b = double.Parse(line[1], CultureInfo.InvariantCulture);
+                double c = double.Parse(line[2], CultureInfo.InvariantCulture);
+
+                double media = (a * 2.0 + b * 3.0 + c * 5.0) / 10.0;
+
+                Console.WriteLine(media.ToString("F1", CultureInfo.InvariantCulture));
+            }
+
+            Console.WriteLine("");
+            Console.WriteLine("-----------------------------------------------------");
+            Console.WriteLine("");
+            Console.WriteLine("E4 - Fazer um programa para ler um número N. Depois leia N pares de números e mostre a divisão do primeiro pelo \r\nsegundo. Se o denominador for igual a zero, mostrar a mensagem \"divisao impossivel\".  ");
+
+            int n5 = int.Parse(Console.ReadLine());
+
+            for (int i = 0; i < n5; i++)
+            {
+
+                string[] line = Console.ReadLine().Split(' ');
+                int x4 = int.Parse(line[0]);
+                int y4 = int.Parse(line[1]);
+
+                if (y4 == 0)
+                {
+                    Console.WriteLine("divisao impossivel");
+                }
+                else
+                {
+                    double div = (double)x4 / y4;
+                    Console.WriteLine(div.ToString("F1", CultureInfo.InvariantCulture));
+                }
+            }
+
+            Console.WriteLine("");
+            Console.WriteLine("-----------------------------------------------------");
+            Console.WriteLine("");
+            Console.WriteLine("E5 -  Ler um valor N. Calcular e escrever seu respectivo fatorial. Fatorial de N = N * (N-1) * (N-2) * (N-3) * ... * 1. \r\nLembrando que, por definição, fatorial de 0 é 1. ");
+
+            int n6 = int.Parse(Console.ReadLine());
+
+            int fat = 1;
+            for (int i2 = 1; i2 <= n6; i2++)
+            {
+                fat = fat * i2;
+            }
+
+            Console.WriteLine(fat);
+
+            Console.WriteLine("");
+            Console.WriteLine("-----------------------------------------------------");
+            Console.WriteLine("");
+            Console.WriteLine("E6 -  Ler um número inteiro N e calcular todos os seus divisores. ");
+
+            int n7 = int.Parse(Console.ReadLine());
+
+            for (int i = 1; i <= n7; i++)
+            {
+                if (n7 % i == 0)
+                {
+                    Console.WriteLine(i);
+                }
+            }
+
+            Console.WriteLine("");
+            Console.WriteLine("-----------------------------------------------------");
+            Console.WriteLine("");
+            Console.WriteLine("E7 -  Fazer um programa para ler um número inteiro positivo N. O programa deve então mostrar na tela N linhas, \r\ncomeçando de 1 até N. Para cada linha, mostrar o número da linha, depois o quadrado e o cubo do valor, conforme \r\nexemplo.  ");
+
+            int n8 = int.Parse(Console.ReadLine());
+
+            for (int i = 1; i <= n8; i++)
+            {
+
+                int primeiro = i;
+                int segundo = i * i;
+                int terceiro = i * i * i;
+                Console.WriteLine($"{primeiro} {segundo} {terceiro}");
+            }
+
+            //----------------------------------------------------------------------
+            // DESAFIOS DE LÓGICA COM O C#
+            Console.WriteLine("-----------------------------------------------------");
             Console.WriteLine("Desafio 5 -  Estrutura Repetitiva WHILE ");
             Console.WriteLine("");
             Console.WriteLine("E1 -  Escreva um programa que repita a leitura de uma senha até que ela seja válida. Para cada leitura de senha \r\nincorreta informada, escrever a mensagem \"Senha Invalida\". Quando a senha for informada corretamente deve ser \r\nimpressa a mensagem \"Acesso Permitido\" e o algoritmo encerrado. Considere que a senha correta é o valor 2002. ");
